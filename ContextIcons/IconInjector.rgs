@@ -1,0 +1,42 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {EA7B0CA1-BF70-406C-BD22-690E5F9E6618} = s 'IconInjector Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}}'
+			Version = s '1.0'
+		}
+	}
+	* {
+		ShellEx {
+			ContextMenuHandlers {
+				ForceRemove IconInjector = s '{EA7B0CA1-BF70-406C-BD22-690E5F9E6618}'
+			}
+		}
+	}
+	Directory {
+		ShellEx {
+			ContextMenuHandlers {
+				ForceRemove IconInjector = s '{EA7B0CA1-BF70-406C-BD22-690E5F9E6618}'
+			}
+		}
+		Background {
+			ShellEx {
+				ContextMenuHandlers {
+					ForceRemove IconInjector = s '{EA7B0CA1-BF70-406C-BD22-690E5F9E6618}'
+				}
+			}
+		}
+	}
+	Drive {
+		ShellEx {
+			ContextMenuHandlers {
+				ForceRemove IconInjector = s '{EA7B0CA1-BF70-406C-BD22-690E5F9E6618}'
+			}
+		}
+	}
+}

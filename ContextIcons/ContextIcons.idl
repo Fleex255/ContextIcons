@@ -1,0 +1,32 @@
+// ContextIcons.idl : IDL source for ContextIcons
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ContextIcons.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(110A49B7-4A79-493A-A7EA-C6008399951D),
+	pointer_default(unique)
+]
+interface IIconInjector : IUnknown{
+};
+[
+	uuid(B6BCBAB3-0A52-406A-9A39-DE29FD822956),
+	version(1.0),
+]
+library ContextIconsLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(EA7B0CA1-BF70-406C-BD22-690E5F9E6618)		
+	]
+	coclass IconInjector
+	{
+		[default] interface IIconInjector;
+	};
+};
+
